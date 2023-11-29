@@ -25,19 +25,19 @@ const SiteProvider = ({ children }: ISiteProviderProps) => {
 
     const navItems: NavItem[] = [
         {
-            label: t("about_us"),
+            label: t("navbar.about_us"),
             elementId: "about_us",
         },
         {
-            label: t("activity"),
+            label: t("navbar.activity"),
             elementId: "activity",
         },
         {
-            label: t("packages"),
+            label: t("navbar.packages"),
             elementId: "packages",
         },
         {
-            label: t("contact_us"),
+            label: t("navbar.contact_us"),
             elementId: "contact_us",
         },
     ];

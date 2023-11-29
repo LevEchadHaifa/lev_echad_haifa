@@ -2,10 +2,11 @@ import React, { useCallback, useContext, useState } from "react";
 import NavbarItem from "./NavbarItem";
 import { SelectedDims } from "./types";
 import styled from "@emotion/styled";
-import { Button, CustomTheme, IconButton, Typography } from "@mui/material";
+import { Button, IconButton, Theme, Typography } from "@mui/material";
 import { Close, Menu } from "@mui/icons-material";
 import { SiteContext } from "context/SiteContext";
 import Logo from "assets/logo.svg";
+import { useTranslation } from "react-i18next";
 
 
 function Navbar(): JSX.Element {
@@ -14,8 +15,6 @@ function Navbar(): JSX.Element {
     const selectDims = useCallback((dims: SelectedDims) => {
         setSelectedDims(dims);
     }, []);
-
-    const displayShadow = window.scrollY > 0;
 
     const [displayLinks, setDisplayLinks] = useState(false);
 
@@ -34,11 +33,10 @@ function Navbar(): JSX.Element {
         navItems
     } = useContext(SiteContext);
 
+    const { t } = useTranslation();
 
     return (
-        <StyledNavBar
-            displayShadow={displayShadow}
-        >
+        <StyledNavBar>
             <StyledMenuIconWrapper>
                 <IconButton size="large" onClick={toggleDisplayLinks}>
                     {displayLinks
@@ -66,17 +64,13 @@ function Navbar(): JSX.Element {
             </NavbarContentWrapper>
             <StyledButton variant="contained">
                 <Typography variant="button">
-                    Donate
+                    {t("navbar.donate")}
                 </Typography>
             </StyledButton>
         </StyledNavBar>
     );
 }
 
-type StyledNavBarProps = {
-    displayShadow: boolean
-    theme?: CustomTheme
-}
 
 const StyledNavBar = styled.nav`
     display: flex;
@@ -92,9 +86,6 @@ const StyledNavBar = styled.nav`
     transition: box-shadow 0.3s ease-in-out;
     padding: 1rem 1rem 0 1rem;
     box-sizing: border-box;
-    box-shadow: ${({
-    displayShadow, theme
-}: StyledNavBarProps) => displayShadow ? theme?.customShadow.gray : ""};
 `;
 
 
@@ -156,8 +147,8 @@ const StyledLinksList = styled.ul`
 `;
 
 type StyledIndicatorProps = {
-    selectedDims?: SelectedDims
-    theme?: CustomTheme
+    selectedDims?: SelectedDims,
+    theme?: Theme
 }
 
 const StyledIndicator = styled.div`
@@ -171,6 +162,7 @@ const StyledIndicator = styled.div`
     transition: left 0.4s ease-in-out, width 0.4s ease-in-out;
     width: ${({ selectedDims }: StyledIndicatorProps) => `${selectedDims?.width}px`};
     left: ${({ selectedDims }: StyledIndicatorProps) => `${selectedDims?.offset}px`};
+    border-radius: 5px;
 `;
 
 const StyledMenuIconWrapper = styled.div`
@@ -188,17 +180,12 @@ const StyledMenuIconWrapper = styled.div`
 //     font-size: 1.5rem;
 // `;
 
-type StyledButtonProps = {
-    theme?: CustomTheme
-}
 
 const StyledButton = styled(Button)`
     width: 9rem;
     height: 3.5rem;
     border-radius: 8px;
     align-self: center;
-    // TODO: Fix box shadow
-    /* box-shadow: ${({ theme }: StyledButtonProps) => `0 0 12 ${theme?.palette.primary.main}`}; */
     box-shadow: 0 0 50 #000;
 `;
 

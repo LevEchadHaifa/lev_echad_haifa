@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { SelectedDims } from "./types";
 import styled from "@emotion/styled";
-import { CustomTheme, Typography } from "@mui/material";
+import { Theme, Typography } from "@mui/material";
 import useWindowDim from "utils/hooks/useWindowDim";
 import { NavItem, SelectedItem } from "context/types";
 
@@ -60,7 +60,7 @@ function NavbarItem({
 
 type StyledNavbarItemProps = {
     isSelected: boolean
-    theme?: CustomTheme
+    theme?: Theme
 }
 
 const StyledNavbarItem = styled.li`
@@ -89,7 +89,7 @@ const StyledNavbarItem = styled.li`
 
 type StyledItemTextProps = {
     isSelected: boolean
-    theme?: CustomTheme
+    theme?: Theme
 }
 
 const StyledItemText = styled(Typography)`

@@ -1,22 +1,10 @@
-import { Theme, ThemeOptions, createTheme } from "@mui/material/styles";
+import { ThemeOptions, createTheme, Theme } from "@mui/material/styles";
 
 declare module "@mui/material/styles" {
-    interface CustomTheme extends Theme {
-        customShadow: {
-            gray: string;
-        };
-    }
-
-    interface CustomThemeOptions extends ThemeOptions {
-        customShadow?: {
-            gray?: string;
-        };
-    }
-
-    export function createTheme(options?: CustomThemeOptions): CustomTheme;
+    function createTheme(options?: ThemeOptions): Theme;
 }
 
-const theme = createTheme({
+let theme = createTheme({
     palette: {
         primary: {
             main: "#be2431"
@@ -24,18 +12,50 @@ const theme = createTheme({
         secondary: {
             main: "#24408e"
         }
-    },
+    }
+});
+
+theme = createTheme(theme, {
     typography: {
+        fontFamily: [
+            "Assistant",
+            "-apple-system",
+            "BlinkMacSystemFont",
+            "\"Segoe UI\"",
+            "Roboto",
+            "\"Helvetica Neue\"",
+            "Arial",
+            "sans-serif",
+            "\"Apple Color Emoji\"",
+            "\"Segoe UI Emoji\"",
+            "\"Segoe UI Symbol\"",
+        ].join(","),
+        h1: {
+            color: theme.palette.primary.main,
+            fontSize: "2.4rem",
+            marginBottom: "2rem",
+            fontFamily: "PassionOne"
+        },
+        h2: {
+            fontSize: "1.9rem",
+            marginBottom: "1rem",
+            fontFamily: "PassionOne"
+        },
         caption: {
             fontSize: "1.4rem",
+            fontFamily: "Assistant",
+            fontWeight: 300
         },
         button: {
+            fontFamily: "Assistant",
             fontSize: "1.1rem",
-            fontWeight: "bold"
+            fontWeight: 600
+        },
+        body1: {
+            fontSize: "1.4rem",
+            fontFamily: "Assistant",
+            fontWeight: 400
         }
-    },
-    customShadow: {
-        gray: "0 0 12 #00000020"
     }
 });
 

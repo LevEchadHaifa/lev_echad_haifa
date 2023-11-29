@@ -1,8 +1,12 @@
 const hebrewLocale = {
-    "about_us": "About Us",
-    "activity": "Activity",
-    "packages": "Packages",
-    "contact_us": "Contact Us"
+    "navbar": {
+        "about_us": "מי אנחנו",
+        "activity": "פעילות",
+        "packages": "חבילות",
+        "contact_us": "יצירת קשר",
+        "donate": "לתרומה"
+    },
+    "about_us_content": ""
 };
 
 export default hebrewLocale;
