@@ -45,8 +45,9 @@ function Navbar(): JSX.Element {
                     }
                 </IconButton>
             </StyledMenuIconWrapper>
+            <StyledLogo src={Logo} />
             <NavbarContentWrapper>
-                <StyledLogo src={Logo} />
+
                 <StyledNavbarWrapper displayLinks={displayLinks}>
                     <StyledLinksList>
                         {navItems.map((navItem) => (

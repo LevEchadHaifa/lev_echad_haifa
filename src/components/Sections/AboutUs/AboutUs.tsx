@@ -2,6 +2,7 @@ import styled from "@emotion/styled";
 import { Typography } from "@mui/material";
 import React from "react";
 import { useTranslation } from "react-i18next";
+import img from "assets/images/main.png";
 
 function AboutUs() {
     const { t } = useTranslation();
@@ -50,19 +51,36 @@ const StyledAboutUs = styled.div`
     flex-direction: row;
     width: 100%;
     padding-top: 7rem;
+
+    @media (max-width: 1000px) {
+        flex-direction: column;
+    }
 `;
 
 const StyledAboutUsImageWrapper = styled.div`
-    flex: 2;
-    background-color: #000;
-    height: 100%;
+    
+    background-image: url(${img});
+    background-size: cover;
     width: 100%;
+
+    @media (min-width: 1000px) {
+        flex: 4;
+        height: auto;
+    }
+
+    @media (max-width: 1000px) {
+        height: 300px;
+    }
 `;
 
 const StyledAboutUsTextWrapper = styled.div`
-    flex: 3;
+    flex: 5;
     padding: 2rem;
     margin-left: 2rem;
+
+    @media (min-width: 100px) {
+        height: auto;
+    }
 `;
 
 const StyledTextWrapper = styled.div`

@@ -5,6 +5,11 @@ html {
         font-size: 12px;
     }
 
+}
+
+html,
+body {
+    overflow-x: hidden;
     box-sizing: border-box;
 }
 
@@ -49,10 +54,8 @@ body {
     -moz-osx-font-smoothing: grayscale;
     top: 0;
     left: 0;
-    box-sizing: border-box;
 
     transition: font-size 200ms ease-in-out;
-    overflow-x: hidden;
 }
 
 code {
