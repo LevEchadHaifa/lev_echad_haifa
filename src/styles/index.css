@@ -39,8 +39,14 @@ body {
 
 @font-face {
     font-family: 'Assistant';
-    src: url('../assets/fonts/Assistant/Assistant-Bold.ttf') format("truetype");
+    src: url('../assets/fonts/Assistant/Assistant-SemiBold.ttf') format("truetype");
     font-weight: 600;
+}
+
+@font-face {
+    font-family: 'Assistant';
+    src: url('../assets/fonts/Assistant/Assistant-ExtraBold.ttf') format("truetype");
+    font-weight: 700;
 }
 
 

@@ -11,26 +11,6 @@ interface ICarouselNavigationProps {
 }
 
 function CarouselNavigation({ numElements, setLocX, movePercent, locX }: ICarouselNavigationProps) {
-    const moveNext = () => {
-        setLocX((currLocX) => {
-            if (currLocX < ((numElements - 1) * movePercent)) {
-                return currLocX + movePercent;
-            }
-
-            return currLocX;
-        });
-    };
-
-    const movePrev = () => {
-        setLocX((currLocX) => {
-            if (currLocX >= movePercent) {
-                return currLocX - movePercent;
-            }
-
-            return currLocX;
-        });
-    };
-
     const goToIndex = (index: number) => {
         if (index >= 0 && index < numElements) {
             setLocX(index * movePercent);
@@ -39,9 +19,6 @@ function CarouselNavigation({ numElements, setLocX, movePercent, locX }: ICarous
 
     return (
         <StyledCarouselNavigation>
-            <IconButton onClick={movePrev}>
-                <ChevronLeft />
-            </IconButton>
             <StyledNavIndicators>
                 {Array(numElements).fill(true).map((_, index) =>
                     <StyledIndicator
@@ -51,9 +28,6 @@ function CarouselNavigation({ numElements, setLocX, movePercent, locX }: ICarous
                     />
                 )}
             </StyledNavIndicators>
-            <IconButton onClick={moveNext}>
-                <ChevronRight />
-            </IconButton>
         </StyledCarouselNavigation>
     );
 }
@@ -84,7 +58,7 @@ const StyledIndicator = styled.div`
     background-color: ${({ isSelected, theme }: StyledIndicatorProps) =>
         isSelected
             ? theme?.palette.primary.main
-            : "#ccc"};
+            : "#eee"};
 
     width: 1rem;
     height: 1rem;

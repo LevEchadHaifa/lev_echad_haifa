@@ -10,7 +10,7 @@ let theme = createTheme({
             main: "#be2431"
         },
         secondary: {
-            main: "#24408e"
+            main: "#F0C4C3"
         }
     }
 });
@@ -40,6 +40,16 @@ theme = createTheme(theme, {
             fontSize: "1.9rem",
             marginBottom: "1rem",
             fontFamily: "PassionOne"
+        },
+        h3: {
+            fontSize: "2.1rem",
+            fontWeight: 600,
+            fontFamily: "Assistant"
+        },
+        subtitle1: {
+            fontSize: "2.6rem",
+            fontWeight: "bold",
+            fontFamily: "Assistant",
         },
         caption: {
             fontSize: "1.4rem",

@@ -57,7 +57,9 @@ const StyledSiteSectionItem = styled.div`
     margin: 0;
     min-height: 50rem;
     min-height: ${({ minHeight }: StyledSiteSectionItemProps) => `${minHeight}px`};
-    width: ${({ width }: StyledSiteSectionItemProps) => `${width}px`}
+    width: ${({ width }: StyledSiteSectionItemProps) => `${width}px`};
+    position: relative;
+    /* overflow-x: hidden; */
 `;
 
 export default SiteSectionItem;

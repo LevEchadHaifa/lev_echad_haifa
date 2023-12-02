@@ -106,10 +106,7 @@ const StyledBottomCover = styled.div`
     opacity: 0;
     transition: opacity 200ms ease-in-out;
     border-radius: 30px;
-    background-color: ${({ index }: StyledBottomCoverProps) =>
-        index % 2 === 1
-            ? theme?.palette.secondary.main
-            : theme?.palette.primary.main};    
+    background-color: ${({ theme }: StyledBottomCoverProps) => theme?.palette.primary.main};    
 `;
 
 type StyledActivityItemProps = {
@@ -119,12 +116,12 @@ type StyledActivityItemProps = {
 }
 
 const StyledActivityItem = styled.div`
-    height: 700px;
-    width: 700px;
+    height: 600px;
+    width: 600px;
     background-image: ${({ img }: StyledActivityItemProps) => `url(${img})`};
     background-size: cover;
     border-radius: 30px;
-    box-shadow: ${({ theme }: StyledActivityItemProps) => theme?.shadows[12]};
+    box-shadow: inset 0 -120px 80px #000000a0, ${({ theme }: StyledActivityItemProps) => theme?.shadows[12]};
     position: relative;
 
     &:hover > ${StyledCover} > ${StyledContent} {
@@ -141,16 +138,7 @@ const StyledActivityItem = styled.div`
     }
     overflow: hidden;
 
-    @media(max-width: 1050px) {
-        height: 600px;
-        width: 600px;
-    }
 
-    @media(max-width: 900px) {
-        height: 500px;
-        width: 500px;
-    }
-    
     @media(max-width: 550px) {
         width: ${({ windowWidth }: StyledActivityItemProps) => `${windowWidth - 50}px`};
         height: ${({ windowWidth }: StyledActivityItemProps) => `${windowWidth - 50}px`};

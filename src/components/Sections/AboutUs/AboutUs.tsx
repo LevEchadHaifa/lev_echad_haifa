@@ -63,7 +63,7 @@ const StyledAboutUsImageWrapper = styled.div`
     background-size: cover;
     width: 100%;
 
-    @media (min-width: 1000px) {
+    @media (min-width: 1000px) { 
         flex: 4;
         height: auto;
     }
