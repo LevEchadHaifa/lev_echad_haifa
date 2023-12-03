@@ -61,7 +61,87 @@ const englishLocale = {
                 "A second-hand store with free clothes for citizens who were evacuated during the war, operated by our regular volunteers."
             ]
         }
-    ]
+    ],
+    "packages_content": [
+        {
+            "title": "package1",
+            "content": [
+                "item1",
+                "item2",
+                "item3",
+                "item4",
+                "item5",
+                "item6"
+            ]
+        },
+        {
+            "title": "package1",
+            "content": [
+                "item1",
+                "item2",
+                "item3",
+                "item4",
+                "item5",
+                "item6"
+            ]
+        },
+        {
+            "title": "package1",
+            "content": [
+                "item1",
+                "item2",
+                "item3",
+                "item4",
+                "item5",
+                "item6"
+            ]
+        },
+        {
+            "title": "package1",
+            "content": [
+                "item1",
+                "item2",
+                "item3",
+                "item4",
+                "item5",
+                "item6"
+            ]
+        },
+        {
+            "title": "package1",
+            "content": [
+                "item1",
+                "item2",
+                "item3",
+                "item4",
+                "item5",
+                "item6"
+            ]
+        },
+        {
+            "title": "package1",
+            "content": [
+                "item1",
+                "item2",
+                "item3",
+                "item4",
+                "item5",
+                "item6"
+            ]
+        }
+    ],
+    "contact_us_content": {
+        "send": "send",
+        "errors": {
+            "required": "required field",
+            "invalid_email": "Email address is invalid",
+            "invalid_phone_number": "phone number is invalid",
+        },
+        "email_success": "Your message was sent successfully!",
+        "email_error": "Sorry, we were unable to send your message.",
+        "already_sent": "Your message was already sent (:",
+        "social_media": "We're also available on:"
+    }
 };
 
 export default englishLocale;

@@ -1,8 +1,7 @@
 import styled from "@emotion/styled";
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import CarouselItem from "./CarouselItem";
 import CarouselNavigation from "./CarouselNavigation";
-import useWindowDim from "utils/hooks/useWindowDim";
 import { IconButton, Theme } from "@mui/material";
 import { ChevronLeft, ChevronRight } from "@mui/icons-material";
 

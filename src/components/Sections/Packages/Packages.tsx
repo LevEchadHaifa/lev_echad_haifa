@@ -1,11 +1,20 @@
+import styled from "@emotion/styled";
 import React from "react";
 
 function Packages() {
     return (
-        <div
+        <StyledPackages
             id="packages"
-        >Packages</div>
+        >
+            Packages
+        </StyledPackages>
     );
 }
+
+
+const StyledPackages = styled.div`
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+`;
 
 export default Packages;

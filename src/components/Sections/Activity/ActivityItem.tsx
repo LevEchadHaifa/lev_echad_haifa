@@ -1,7 +1,6 @@
 import styled from "@emotion/styled/macro";
 import { Theme, Typography } from "@mui/material";
 import React from "react";
-import theme from "styles/theme";
 import useWindowDim from "utils/hooks/useWindowDim";
 
 export interface IActivityItemProps {

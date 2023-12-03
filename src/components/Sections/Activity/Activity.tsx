@@ -4,7 +4,6 @@ import Carousel from "components/Carousel/Carousel";
 import main from "assets/images/main.png";
 import { useTranslation } from "react-i18next";
 import ActivityItem, { IActivityItemProps } from "./ActivityItem";
-import { Theme, Typography } from "@mui/material";
 
 const NUM_ACTIVITIES = 7;
 const NUM_DESCRIPTION_ITEMS = 2;
@@ -53,24 +52,20 @@ function Activity() {
     );
 }
 
-type StyledActivityProps = {
-    theme?: Theme
-}
-
 const StyledActivity = styled.div`
     width: 100%;
     padding-top: 10rem;
     display: flex;
     flex-direction: column;
-    background-color: ${({ theme }: StyledActivityProps) => theme?.palette.secondary.main};
+    background-color: #fff;
     align-items: center;
     justify-content: center;
 `;
 
-const StyledTitle = styled(Typography)`
-    font-weight: 600;
-    padding-left: 2rem;
-`;
+// const StyledTitle = styled(Typography)`
+//     font-weight: 600;
+//     padding-left: 2rem;
+// `;
 
 
 

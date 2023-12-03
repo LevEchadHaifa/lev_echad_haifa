@@ -42,7 +42,12 @@ theme = createTheme(theme, {
             fontFamily: "PassionOne"
         },
         h3: {
-            fontSize: "2.1rem",
+            fontSize: "1.9rem",
+            fontWeight: 600,
+            fontFamily: "Assistant"
+        },
+        h4: {
+            fontSize: "1.4rem",
             fontWeight: 600,
             fontFamily: "Assistant"
         },
@@ -50,6 +55,14 @@ theme = createTheme(theme, {
             fontSize: "2.6rem",
             fontWeight: "bold",
             fontFamily: "Assistant",
+        },
+        subtitle2: {
+            fontSize: "2rem",
+            fontWeight: "bold",
+            fontFamily: "Assistant",
+            color: theme.palette.primary.main,
+            textAlign: "center",
+            marginBottom: "1rem"
         },
         caption: {
             fontSize: "1.4rem",
@@ -63,6 +76,11 @@ theme = createTheme(theme, {
         },
         body1: {
             fontSize: "1.4rem",
+            fontFamily: "Assistant",
+            fontWeight: 400
+        },
+        body2: {
+            fontSize: "1.2rem",
             fontFamily: "Assistant",
             fontWeight: 400
         }

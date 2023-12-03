@@ -1,6 +1,5 @@
 import styled from "@emotion/styled";
-import { ChevronLeft, ChevronRight } from "@mui/icons-material";
-import { IconButton, Theme } from "@mui/material";
+import { Theme } from "@mui/material";
 import React from "react";
 
 interface ICarouselNavigationProps {
@@ -58,7 +57,7 @@ const StyledIndicator = styled.div`
     background-color: ${({ isSelected, theme }: StyledIndicatorProps) =>
         isSelected
             ? theme?.palette.primary.main
-            : "#eee"};
+            : "#ccc"};
 
     width: 1rem;
     height: 1rem;
