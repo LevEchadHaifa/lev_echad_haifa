@@ -26,11 +26,11 @@ function ActivityItem({ index, img, title, description }: IActivityItemProps) {
                     <StyledDescriptionWrapper>
                         <StyledDescription>
                             {description.map((descItem, index) =>
-                                <li key={index}>
+                                <StyledListItem key={index}>
                                     <Typography variant="body1">
                                         {descItem}
                                     </Typography>
-                                </li>
+                                </StyledListItem>
                             )}
                         </StyledDescription>
                     </StyledDescriptionWrapper>
@@ -51,6 +51,21 @@ const StyledDescription = styled.ul`
     opacity: 0;
     transition-delay: 100ms;
     padding-right: 1rem;
+    list-style: none;
+    padding-left: 1rem;
+`;
+
+type StyledListItmeProps = {
+    theme?: Theme
+}
+
+const StyledListItem = styled.li`
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 1rem;
+    margin-bottom: 1rem;
+    color: #000;
+    box-shadow: ${({ theme }: StyledListItmeProps) => theme?.shadows[12]} 
 `;
 
 const StyledDescriptionWrapper = styled.div`
@@ -125,6 +140,10 @@ const StyledActivityItem = styled.div`
 
     &:hover > ${StyledCover} > ${StyledContent} {
         top: 20px;
+
+        @media(max-width: 400px) {
+            top: 10px
+        }
     }
 
     &:hover > ${StyledBottomCover} {
@@ -140,9 +159,11 @@ const StyledActivityItem = styled.div`
 
     @media(max-width: 550px) {
         width: ${({ windowWidth }: StyledActivityItemProps) => `${windowWidth - 50}px`};
-        height: ${({ windowWidth }: StyledActivityItemProps) => `${windowWidth - 50}px`};
+        height: ${({ windowWidth }: StyledActivityItemProps) => `${windowWidth + 50}px`};
     }
 `;
+
+
 
 
 

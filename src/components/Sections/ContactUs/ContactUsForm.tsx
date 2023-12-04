@@ -1,5 +1,5 @@
 import styled from "@emotion/styled";
-import { Alert, Button, CircularProgress, MenuItem, Select, SelectChangeEvent, Theme, Typography } from "@mui/material";
+import { Alert, MenuItem, Select, SelectChangeEvent, Theme, Typography } from "@mui/material";
 import React, { useRef, useState } from "react";
 import { useTranslation } from "react-i18next";
 import ContactField, { ContactFieldKeys } from "./ContactField";
@@ -86,7 +86,10 @@ function ContactUsForm() {
         if (requiredFieldError(name, value)) {
             return false;
         }
-        if (!(/^[+]?[(]?[0-9]{3}[)]?[-\s.]?[0-9]{3}[-\s.]?[0-9]{4,6}$/.test(value))) {
+
+        console.log(value);
+
+        if (!(/^[+]?[(]?[0-9]{3}[)]?[-\s.]?[0-9]{3}[-\s.]?[0-9]{3,6}$/.test(value))) {
             changeError(name, "invalid_phone_number");
             return false;
         }
@@ -103,7 +106,6 @@ function ContactUsForm() {
             default:
                 return verifyStrings(name, value);
         }
-
     };
 
     const onSubmit = (event: React.FormEvent<HTMLFormElement>) => {
@@ -128,8 +130,7 @@ function ContactUsForm() {
                     "contact_service",
                     "template_3o398z8",
                     formRef.current || "",
-                    // "Sum7smjQbBK8yr7c5"
-                    "Sum7smj"
+                    "Sum7smjQbBK8yr7c5"
                 )
                 .then(() => {
                     setEmailSendStatus(EmailSendStatus.Success);

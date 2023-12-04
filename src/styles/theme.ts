@@ -10,7 +10,7 @@ let theme = createTheme({
             main: "#be2431"
         },
         secondary: {
-            main: "#F0C4C3"
+            main: "#E04542"
         }
     }
 });
@@ -44,7 +44,10 @@ theme = createTheme(theme, {
         h3: {
             fontSize: "1.9rem",
             fontWeight: 600,
-            fontFamily: "Assistant"
+            fontFamily: "Assistant",
+            [theme.breakpoints.down("sm")]: {
+                fontSize: "1.7rem"
+            },
         },
         h4: {
             fontSize: "1.4rem",
@@ -71,20 +74,35 @@ theme = createTheme(theme, {
         },
         button: {
             fontFamily: "Assistant",
-            fontSize: "1.1rem",
-            fontWeight: 600
+            fontSize: "1.2rem",
+            fontWeight: 700
         },
         body1: {
-            fontSize: "1.4rem",
+            fontSize: "1.5rem",
             fontFamily: "Assistant",
-            fontWeight: 400
+            fontWeight: 400,
+            [theme.breakpoints.down("md")]: {
+                fontSize: "1.3rem"
+            },
         },
         body2: {
             fontSize: "1.2rem",
             fontFamily: "Assistant",
-            fontWeight: 400
+            fontWeight: 600,
+            [theme.breakpoints.down("md")]: {
+                fontSize: "1.4rem"
+            },
         }
-    }
+    },
+    breakpoints: {
+        values: {
+            xs: 0,
+            sm: 400,
+            md: 600,
+            lg: 1200,
+            xl: 1536,
+        }
+    },
 });
 
 export default theme;

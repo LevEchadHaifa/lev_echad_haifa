@@ -1,3 +1,9 @@
+import packages_winter_en from "assets/images/packages/winter_en.jpeg";
+import packages_field_en from "assets/images/packages/field_en.jpeg";
+import packages_families_en from "assets/images/packages/families_en.png";
+import packages_babies_en from "assets/images/packages/babies_en.png";
+
+
 const englishLocale = {
     "navbar": {
         "about_us": "About us",
@@ -52,7 +58,7 @@ const englishLocale = {
         {
             "title": "Assisting the agricultural sector",
             "desc": [
-                "In collaboration with Supporting Israeli Farmers INCOMPLETED!!!!!!!!"
+                "In collaboration with Emergency Farmers Support non profit"
             ]
         },
         {
@@ -62,74 +68,75 @@ const englishLocale = {
             ]
         }
     ],
-    "packages_content": [
-        {
-            "title": "package1",
-            "content": [
-                "item1",
-                "item2",
-                "item3",
-                "item4",
-                "item5",
-                "item6"
-            ]
-        },
-        {
-            "title": "package1",
-            "content": [
-                "item1",
-                "item2",
-                "item3",
-                "item4",
-                "item5",
-                "item6"
-            ]
-        },
-        {
-            "title": "package1",
-            "content": [
-                "item1",
-                "item2",
-                "item3",
-                "item4",
-                "item5",
-                "item6"
-            ]
-        },
-        {
-            "title": "package1",
-            "content": [
-                "item1",
-                "item2",
-                "item3",
-                "item4",
-                "item5",
-                "item6"
-            ]
-        },
-        {
-            "title": "package1",
-            "content": [
-                "item1",
-                "item2",
-                "item3",
-                "item4",
-                "item5",
-                "item6"
-            ]
-        },
-        {
-            "title": "package1",
-            "content": [
-                "item1",
-                "item2",
-                "item3",
-                "item4",
-                "item5",
-                "item6"
-            ]
+    "packages_content": {
+        "currency": "usd",
+        "package_content_see": "see package content",
+        "package_content_hide": "hide package content",
+        "data": {
+            "soldiers": {
+                "type_name": "Packages for soldiers",
+                "packages": [
+                    {
+                        "title": "Winter Care Package For Soldiers",
+                        "items": [
+                            "Thermal long sleeved top",
+                            "Thermal Leggings",
+                            "Fleece Neck Warmers",
+                            "T shirts",
+                            "Socks",
+                            "Underwear"
+                        ],
+                        "price": "50$",
+                        "image": packages_winter_en
+                    },
+                    {
+                        "title": "Outdoor Care Package for Soldiers",
+                        "items": [
+                            "Propane Tank",
+                            "Leatherman multi - tool knife",
+                            "Tactical headlamp",
+                            "Protein bar",
+                            "Field Coffee kit"
+                        ],
+                        "price": "80$",
+                        "image": packages_field_en
+                    },
+                ]
+            },
+            "evacuated": {
+                "type_name": "Packages for evacuated people",
+                "packages": [
+                    {
+                        "title": "Care package for evacuated families",
+                        "items": [
+                            "Pasta/Rice",
+                            "Cooking oil",
+                            "Sauces and spreads",
+                            "Canned goods",
+                            "Deodorant",
+                            "Shampoo",
+                            "Books/games"
+                        ],
+                        "price": "40$",
+                        "image": packages_families_en
+                    },
+                    {
+                        "title": "Care package for evacuated babies",
+                        "items": [
+                            "Baby formula",
+                            "Diapers",
+                            "Wet wipes",
+                            "Baby soap",
+                            "Pacifiers"
+                        ],
+                        "price": "75$",
+                        "image": packages_babies_en
+                    },
+                ]
+            }
         }
-    ],
+
+    },
     "contact_us_content": {
         "send": "send",
         "errors": {

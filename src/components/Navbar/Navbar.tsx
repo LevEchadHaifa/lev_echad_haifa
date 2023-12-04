@@ -33,7 +33,7 @@ function Navbar(): JSX.Element {
         navItems
     } = useContext(SiteContext);
 
-    const { t } = useTranslation();
+    const { t, i18n } = useTranslation();
 
     return (
         <StyledNavBar>
@@ -63,11 +63,18 @@ function Navbar(): JSX.Element {
                     <StyledIndicator selectedDims={selectedDims} />
                 </StyledNavbarWrapper>
             </NavbarContentWrapper>
-            <StyledButton variant="contained">
-                <Typography variant="button">
-                    {t("navbar.donate")}
-                </Typography>
-            </StyledButton>
+            <StyledLink
+                href={`https://www.jgive.com/new/${i18n.language}/${t("packages_content.currency")}/donation-targets/113436/donate/amount`}
+                target="_blank"
+                rel="noopener noreferrer"
+            >
+                <StyledButton variant="contained">
+                    <Typography variant="button">
+                        {t("navbar.donate")}
+                    </Typography>
+                </StyledButton>
+            </StyledLink>
+
         </StyledNavBar>
     );
 }
@@ -87,6 +94,12 @@ const StyledNavBar = styled.nav`
     transition: box-shadow 0.3s ease-in-out;
     padding: 1rem 1rem 0 1rem;
     box-sizing: border-box;
+`;
+
+const StyledLink = styled.a`
+    display: flex;
+    align-items: center;
+    text-decoration: none;
 `;
 
 

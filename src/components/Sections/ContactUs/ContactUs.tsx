@@ -32,7 +32,7 @@ function ContactUs() {
                         <StyledSocialMediaIcon src={Instagram} />
                     </a>
                     <a
-                        href="#"
+                        href="https://wa.me/972525148213"
                         target="_blank"
                         rel="noopener noreferrer"
                     >
