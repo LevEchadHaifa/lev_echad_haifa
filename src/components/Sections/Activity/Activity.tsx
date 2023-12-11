@@ -1,13 +1,64 @@
 import React from "react";
 import styled from "@emotion/styled";
 import Carousel from "components/Carousel/Carousel";
-import main from "assets/images/main.png";
+import soldiers from "assets/images/activities/soldiers.jpeg";
+import families from "assets/images/activities/families.jpg";
+import hotels from "assets/images/activities/hotels.jpeg";
+import elderly from "assets/images/activities/elderly.jpeg";
+import agriculture from "assets/images/activities/agriculture.jpeg";
+import clothing from "assets/images/activities/clothing.jpeg";
 import { useTranslation } from "react-i18next";
-import ActivityItem, { IActivityItemProps } from "./ActivityItem";
+import ActivityItem, { IActivityItemProps, ImageDescriptor } from "./ActivityItem";
+import { Typography } from "@mui/material";
 
-const NUM_ACTIVITIES = 7;
+const NUM_ACTIVITIES = 6;
 const NUM_DESCRIPTION_ITEMS = 2;
-const images: string[] = [main, main, main, main, main, main, main];
+
+
+const images: ImageDescriptor[] = [
+    {
+        image: soldiers,
+        position: {
+            locX: 0,
+            locY: 50
+        }
+    },
+    {
+        image: families,
+        position: {
+            locX: 0,
+            locY: 0
+        }
+    },
+    {
+        image: hotels,
+        position: {
+            locX: 0,
+            locY: 0
+        }
+    },
+    {
+        image: elderly,
+        position: {
+            locX: 0,
+            locY: 0
+        }
+    },
+    {
+        image: agriculture,
+        position: {
+            locX: 50,
+            locY: 0
+        }
+    },
+    {
+        image: clothing,
+        position: {
+            locX: 0,
+            locY: 90
+        }
+    }
+];
 const activities: IActivityItemProps[] = [];
 
 function Activity() {
@@ -40,6 +91,7 @@ function Activity() {
         <StyledActivity
             id="activity"
         >
+            <StyledTitle variant="subtitle2">{t("navbar.activity")}</StyledTitle>
             <Carousel>
                 {activities.map((activity, index) =>
                     <ActivityItem
@@ -62,10 +114,10 @@ const StyledActivity = styled.div`
     justify-content: center;
 `;
 
-// const StyledTitle = styled(Typography)`
-//     font-weight: 600;
-//     padding-left: 2rem;
-// `;
+const StyledTitle = styled(Typography)`
+    width: 100%;
+    /* padding-left: 5rem; */
+`;
 
 
 

@@ -45,7 +45,7 @@ function PackageItem({ items, image, price }: IPackageItemProps) {
                 <StyledFooter>
                     <Typography variant="h3">{price}</Typography>
                     <a
-                        href={`https://www.jgive.com/new/${i18n.language}/${t("packages_content.currency")}/donation-targets/113436/donate/amount`}
+                        href={`https://www.jgive.com/new/${i18n.language}/${t("packages_content.currency")}/donation-targets/113436`}
                         target="_blank"
                         rel="noopener noreferrer"
                     >

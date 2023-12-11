@@ -145,7 +145,7 @@ function ContactUsForm() {
 
     return (
         <StyledContactUsFormWrapper>
-            <Typography variant="subtitle2">Contact us</Typography>
+            <StyledTitle variant="subtitle2">Contact us</StyledTitle>
             <StyledContactUsForm ref={formRef} onSubmit={onSubmit}>
                 <StyledHorizontalWrapper>
                     <ContactField
@@ -267,6 +267,10 @@ const StyledContactUsForm = styled.form`
 const StyledAlert = styled(Alert)`
     font-size: 20px;
     margin-top: 1rem;
+`;
+
+const StyledTitle = styled(Typography)`
+    margin-bottom: 1rem;
 `;
 
 export default ContactUsForm;

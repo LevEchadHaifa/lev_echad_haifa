@@ -1,5 +1,5 @@
 import styled from "@emotion/styled";
-import { Typography } from "@mui/material";
+import { Theme, Typography } from "@mui/material";
 import React from "react";
 import { useTranslation } from "react-i18next";
 import PackageItem, { IPackageItemProps } from "./PackageItem";
@@ -58,15 +58,23 @@ function Packages() {
         >
             {Object.keys(arrMap).map((key) =>
                 <StyledPackageTypeBlock key={key}>
-                    <Typography variant="subtitle2">
-                        {t(`packages_content.data.${key}.type_name`)}
-                    </Typography>
-                    {arrMap[key as PackagesTypes].map(packageItem =>
-                        <PackageItem
-                            key={key}
-                            {...packageItem}
-                        />
-                    )}
+                    <StyledTitle>
+                        <StyledPackagesFor variant="subtitle2">
+                            {t("packages_content.packages_for")}
+                        </StyledPackagesFor>
+                        <Typography variant="subtitle2">
+                            {t(`packages_content.data.${key}.type_name`)}
+                        </Typography>
+                    </StyledTitle>
+                    <StyledPackagesList>
+                        {arrMap[key as PackagesTypes].map(packageItem =>
+                            <PackageItem
+                                key={key}
+                                {...packageItem}
+                            />
+                        )}
+                    </StyledPackagesList>
+
                 </StyledPackageTypeBlock>
             )}
 
@@ -74,12 +82,24 @@ function Packages() {
     );
 }
 
+type StyledPacakgesProps = {
+    theme?: Theme
+}
 
 const StyledPackages = styled.div`
     display: flex;
+    flex-direction: column;
+    gap: 7rem;
+    padding: 8rem 0; 
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+`;
+
+const StyledPackagesList = styled.div`
+    display: flex;
     flex-direction: row;
-    gap: 3rem;
-    padding-top: 8rem;
+    gap: 5rem;
 
     @media(max-width: 1000px) {
         flex-direction: column;
@@ -91,6 +111,24 @@ const StyledPackageTypeBlock = styled.div`
     flex-direction: column;
     gap: 2rem;
     align-items: center;
+`;
+
+const StyledTitle = styled.div`
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
+
+    & > * {
+        color: #fff;
+    }
+`;
+
+const StyledPackagesFor = styled(Typography)`
+    font-weight: 600;
+    text-transform: none;
+    transform: scale(0.85);
+    transform-origin: left;
 `;
 
 export default Packages;

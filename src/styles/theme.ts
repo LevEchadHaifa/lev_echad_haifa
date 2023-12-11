@@ -32,12 +32,12 @@ theme = createTheme(theme, {
         ].join(","),
         h1: {
             color: theme.palette.primary.main,
-            fontSize: "2.4rem",
+            fontSize: "2.8rem",
             marginBottom: "2rem",
             fontFamily: "PassionOne"
         },
         h2: {
-            fontSize: "1.9rem",
+            fontSize: "2.3rem",
             marginBottom: "1rem",
             fontFamily: "PassionOne"
         },
@@ -60,12 +60,12 @@ theme = createTheme(theme, {
             fontFamily: "Assistant",
         },
         subtitle2: {
-            fontSize: "2rem",
+            fontSize: "2.1rem",
             fontWeight: "bold",
             fontFamily: "Assistant",
             color: theme.palette.primary.main,
             textAlign: "center",
-            marginBottom: "1rem"
+            textTransform: "uppercase"
         },
         caption: {
             fontSize: "1.4rem",

@@ -61,6 +61,7 @@ const StyledAboutUsImageWrapper = styled.div`
     
     background-image: url(${img});
     background-size: cover;
+    background-position: 50% 0;
     width: 100%;
 
     @media (min-width: 1000px) { 

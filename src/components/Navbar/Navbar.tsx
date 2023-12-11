@@ -64,7 +64,7 @@ function Navbar(): JSX.Element {
                 </StyledNavbarWrapper>
             </NavbarContentWrapper>
             <StyledLink
-                href={`https://www.jgive.com/new/${i18n.language}/${t("packages_content.currency")}/donation-targets/113436/donate/amount`}
+                href={`https://www.jgive.com/new/${i18n.language}/${t("packages_content.currency")}/donation-targets/113436`}
                 target="_blank"
                 rel="noopener noreferrer"
             >
@@ -116,14 +116,14 @@ type StyledNavbarWrapperProps = {
 }
 
 const StyledNavbarWrapper = styled.div`
-    width: 40rem;
+    width: 45rem;
     height: 100%;
     display: flex;
     flex-direction: column;
     position: relative;
     transition: top 200ms ease-in-out, opacity 300ms ease-in;
 
-    @media (max-width: 980px) {
+    @media (max-width: 1050px) {
         display: flex;
         visibility: ${({ displayLinks }: StyledNavbarWrapperProps) => displayLinks ? "visible" : "hidden"};
         top: ${({ displayLinks }: StyledNavbarWrapperProps) => displayLinks ? "0" : "-50px"};
@@ -149,7 +149,7 @@ const StyledLinksList = styled.ul`
     width: 100%;
     box-sizing: border-box;
 
-    @media (max-width: 980px) {
+    @media (max-width: 1050px) {
         flex-direction: column;
         align-items: flex-start;
         justify-content: flex-start;
@@ -182,7 +182,7 @@ const StyledIndicator = styled.div`
 const StyledMenuIconWrapper = styled.div`
     display: none;
     
-    @media (max-width: 980px) {
+    @media (max-width: 1050px) {
         width: 4rem;
         display: flex;
         justify-content: center;

@@ -1,15 +1,15 @@
 import packages_winter_en from "assets/images/packages/winter_en.jpeg";
 import packages_field_en from "assets/images/packages/field_en.jpeg";
-import packages_families_en from "assets/images/packages/families_en.png";
-import packages_babies_en from "assets/images/packages/babies_en.png";
+import packages_families_en from "assets/images/packages/families_en.jpeg";
+import packages_babies_en from "assets/images/packages/babies_en.jpeg";
 
 
 const englishLocale = {
     "navbar": {
-        "about_us": "About us",
-        "activity": "What we do",
-        "packages": "Packages",
-        "contact_us": "Contact us",
+        "about_us": "About Us",
+        "activity": "Our Activities",
+        "packages": "Donation Packages",
+        "contact_us": "Contact Us",
         "donate": "Donate"
     },
     "about_us_content": {
@@ -37,7 +37,7 @@ const englishLocale = {
             ]
         },
         {
-            "title": "Establishing educational programs for children staying in hotel",
+            "title": "Establishing educational programs for children staying in hotels",
             "desc": [
                 "We currently operate in 15 hotels in haifa and 7 hotels in the surrounding area",
                 "Recurring educational program during the afternoons"
@@ -47,12 +47,6 @@ const englishLocale = {
             "title": "Mapping the needs of Haifa’s senior citizens",
             "desc": [
                 "A team of 50 volunteers works in collaboration with the Haifa municipality to evaluate the needs of Haifa's senior citizens, offering them support during emergencies"
-            ]
-        },
-        {
-            "title": "Restoration of bomb shelters",
-            "desc": [
-                "A team of volunteers which coordinates with the Haifa municipality to clean and restore civilian bomb shelters. So far we have resotred 58 shelters"
             ]
         },
         {
@@ -72,9 +66,10 @@ const englishLocale = {
         "currency": "usd",
         "package_content_see": "see package content",
         "package_content_hide": "hide package content",
+        "packages_for": "Packages For",
         "data": {
             "soldiers": {
-                "type_name": "Packages for soldiers",
+                "type_name": "Soldiers",
                 "packages": [
                     {
                         "title": "Winter Care Package For Soldiers",
@@ -104,7 +99,7 @@ const englishLocale = {
                 ]
             },
             "evacuated": {
-                "type_name": "Packages for evacuated people",
+                "type_name": "Evacuated Citizens",
                 "packages": [
                     {
                         "title": "Care package for evacuated families",

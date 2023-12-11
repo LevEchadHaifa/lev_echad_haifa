@@ -3,9 +3,17 @@ import { Theme, Typography } from "@mui/material";
 import React from "react";
 import useWindowDim from "utils/hooks/useWindowDim";
 
+export interface ImageDescriptor {
+    image: string
+    position: {
+        locX: number
+        locY: number
+    }
+}
+
 export interface IActivityItemProps {
     index: number
-    img: string,
+    img: ImageDescriptor,
     title: string,
     description: string[]
 }
@@ -124,16 +132,17 @@ const StyledBottomCover = styled.div`
 `;
 
 type StyledActivityItemProps = {
-    img: string
+    img: ImageDescriptor
     windowWidth: number
     theme?: Theme
 }
 
 const StyledActivityItem = styled.div`
-    height: 600px;
+    height: 700px;
     width: 600px;
-    background-image: ${({ img }: StyledActivityItemProps) => `url(${img})`};
+    background-image: ${({ img }: StyledActivityItemProps) => `url(${img.image})`};
     background-size: cover;
+    background-position: ${({ img }: StyledActivityItemProps) => `${img.position.locX}% ${img.position.locY}%`};
     border-radius: 30px;
     box-shadow: inset 0 -120px 80px #000000a0, ${({ theme }: StyledActivityItemProps) => theme?.shadows[12]};
     position: relative;
